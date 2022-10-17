@@ -1,0 +1,12 @@
+Component1:
+  Name: "aws.greengrass.Cli"
+  # Value for Asset Property "HubName". E.g, "CookieFactoryHub"
+  Version: "2.6.0"
+Component2:
+  Name: "aws.greengrass.Nucleus"
+  # Value for Asset Property "HubName". E.g, "CookieFactoryHub"
+  Version: "2.6.0"
+Component3:
+  Name: "aws.iot.EdgeConnectorForKVS"
+  # Value for Asset Property "HubName". E.g, "CookieFactoryHub"
+  Version: "1.0.4"
