@@ -65,8 +65,7 @@ RUN git clone https://gitlab.freedesktop.org/gstreamer/gstreamer.git --branch 1.
 RUN cd gstreamer && \
     meson --buildtype=release --strip -Dbase=enabled -Dgood=enabled -Dbad=enabled --prefix=/opt/gst build && \
     ninja -C build && \
-    meson install -C build && \
-    cd .. && \
+    meson install -C build
 
 # add GStreamer libraries to the loading path
 RUN echo "/opt/gst/lib64" >> /etc/ld.so.conf.d/gst.conf && ldconfig
