@@ -301,6 +301,7 @@ class resourceManager():
                     hub.get("Name"),  self.sitewise_asset_model_id_hub)
                 properties = self.describe_sitewise_asset(hub_asset_id)
                 print("Created hub asset: " + hub.get("Name"))
+                self.hubId = hub_asset_id
                 hierarchy_id_value = self.get_hub_asset_model_hierarchy_id()
                 for key in hub:
                     if properties.get(key):
@@ -517,7 +518,7 @@ class resourceManager():
                         "secretsmanager:GetSecretValue"
                     ],
                     "Effect": "Allow",
-                    "Resource": [self.arn_for_secret(camera.get('Name')) for camera in self.cameras]
+                    "Resource": [self.arn_for_secret(camera.get('Name')) + "-??????" for camera in self.cameras]
                 },
                 {
                     "Action": [

@@ -10,7 +10,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: aws-iot-greengrass
-    image: x86_64/aws-iot-greengrass:2.5.4
+    image: aws-iot-edge-connector-for-kvs:2.5.4
     volumes:
       - ./greengrass-v2-credentials:/root/.aws/:ro
     env_file: .env
