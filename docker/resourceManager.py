@@ -560,7 +560,7 @@ class resourceManager():
             )
 
     def arn_for_secret(self, camera_name):
-        return "arn:aws:secretsmanager:{}:{}:secret:{}".format(REGION, ACCOUNT_ID, self.secret_hash(camera_name))
+        return "arn:aws:secretsmanager:{}:{}:secret:CameraSecret-{}".format(REGION, ACCOUNT_ID, self.secret_hash(camera_name))
 
     def secret_hash(self, camera_name):
         m = hashlib.md5()

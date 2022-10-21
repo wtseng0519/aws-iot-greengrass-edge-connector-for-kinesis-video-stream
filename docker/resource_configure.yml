@@ -16,7 +16,7 @@ CameraAsset:
   CaptureStartTime: "* * * * *"
   # Local video capture duration time. If CaptureStartTime been set to keep capturing or never start, this value
   # does not take efforts.
-  CaptureDurationInMinutes: 2
+  CaptureDurationInMinutes: 10
   # Local data retention period. The recorded video file on hub older than this time will be deleted.
   LocalDataRetentionPeriodInMinutes: 1800
   # KinesisVideoStreamName where video will be streaming to.
@@ -26,7 +26,7 @@ CameraAsset:
   LiveStreamingStartTime: "* * * * *"
   # Live streaming duration time. If LiveStreamingStartTime been set to keep streaming or never start, this value
   # does not take efforts.
-  LiveStreamingDurationInMinutes: 4
+  LiveStreamingDurationInMinutes: 10
   # IP camera's RTSP stream url. The url must contains user name and password.
   # The url will be saved in AWS Secret Manager and protected. Secrets arn will be updated into RTSPStreamSecretARN
   # Example: rtsp://<username>:<password>@<IP address>:<Portal>/<settings decided by camera type>
